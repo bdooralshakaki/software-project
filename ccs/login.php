@@ -4,7 +4,7 @@
 	require_once 'dbconnect.php';// Import the file "dbconnect.php" which is the connection of project with the database
 	
 	if ( isset($_SESSION['user'])!="" ) { // It will never let you open index(login) page if you are logged in
-		header("Location: index.html"); // Automatic send to home.php and blocking index page.
+		header("Location: index.php"); // Automatic send to home.php and blocking index page.
 		exit;
 	}
 	
@@ -36,6 +36,18 @@
 			} else {
 				$errMSG = "Incorrect Credentials, Try again..."; // returning error if anything goes wrong.
 			}
+			
+		     $_SESSION['signed_in'] = true;
+		     header('Location: index.php');
+		     
+		     while($row = mysql_fetch_assoc($result)){
+		       $_SESSION['userId']    = $row['userId'];
+		       $_SESSION['userEmail']  = $row['userEmail'];
+		       $_SESSION['userName']  = $row['userName'];
+		       $_SESSION['userLevel'] = $row['userLevel'];
+    
+     
+    		}
 				
 		}
 		

@@ -2,7 +2,7 @@
 	ob_start();
 	session_start(); // Starts the session
 	if( isset($_SESSION['user'])!="" ){
-		header("Location: home.php");
+		header("Location: login.php");
 	}
 	include_once 'dbconnect.php';
 
@@ -50,7 +50,18 @@
 		    // Return Error - Invalid Email
 		    $error = true;
 		    $emailError = 'The email you have entered is invalid, please try again.';
-		} else {
+		}
+		else if(!preg_match('/^x[\d]{8}@student\.dcu\.ie$/', $email)){ // forcing exact x(8 numbers)@student.dcu.ie on the user/student
+		    // Return Error - Invalid Email
+		    $error = true;
+		    $emailError = 'The email you have entered is invalid, please try again.';
+		}
+		else if(!preg_match('/^x[\d]{8}@student\.ucd\.ie$/', $email)){ // forcing exact x(8 numbers)@student.ucd.ie on the user/student
+		    // Return Error - Invalid Email
+		    $error = true;
+		    $emailError = 'The email you have entered is invalid, please try again.';
+		}
+		else {
 			// check email exist or not
 			$query = "SELECT userEmail FROM users WHERE userEmail='$email'";
 			$result = mysql_query($query);
@@ -138,7 +149,7 @@
     	<div class="col-md-12">
         
         	<div class="form-group">
-            	<br /><br /><h2 class="">Sign Up to Clubs and Societies</h2>
+            	<br /><br /><h2 class="">Sign Up to College C&S</h2>
             </div>
         
         	<div class="form-group">
@@ -213,7 +224,7 @@
             </div>
             
             <div class="form-group">
-            	<a href="home.php">Sign in Here...</a>
+            	<a href="login.php">Sign in Here...</a>
             </div>
         
         </div>

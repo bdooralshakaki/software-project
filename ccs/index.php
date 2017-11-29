@@ -1,3 +1,12 @@
+<?php
+    ob_start();
+    session_start();
+    
+    include 'dbconnect.php';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +47,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#services"></a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
