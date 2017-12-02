@@ -1,11 +1,8 @@
 <?php
-    ob_start();
-    session_start();
-    
-    include 'dbconnect.php';
+	ob_start();
+	session_start();
+	require_once 'dbconnect.php';
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +72,7 @@
         </div>
       </div>
     </nav>
-
+  
 
        <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
@@ -86,7 +83,7 @@
             
           </div>
         </div>
-        
+        </br>
         <div class="row">
           <div class="col-md-4 col-sm-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
@@ -95,10 +92,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/ncipool.png" alt="" width="160" height="100">
+              <img class="img-fluid" src="img/ncipool.png" alt="" width="400" height="200">
             </a>
             <div class="portfolio-caption">
               <h4>Pool club</h4>
+              <p class="text-muted">NCI</p>
               
             </div>
           </div>
@@ -110,11 +108,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/ncipool.png" alt="" width="400" height="200">
             </a>
             <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
+              <h4>Pool club</h4>
+              <p class="text-muted">NCI</p>
             </div>
           </div>
           
@@ -125,56 +123,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/ncipool.png" alt="" width="400" height="200">
             </a>
             <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
-            </div>
-          </div>
-          
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
-            </div>
-          </div>
-          
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
-            </div>
-          </div>
-          
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Pool club</h4>
+              <p class="text-muted">NCI</p>
             </div>
           </div>
         </div>
@@ -198,7 +151,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Pool Club</h2>
                   <p class="item-intro text-muted"> NCI pool club</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                  <img class="img-fluid d-block mx-auto" src="img/ncipool.png" alt="">
                   <p>Welcome to the NCI Pool Society page! Our aim to provide students of NCI a fun pool experience in the college as well as competing against other colleges in tournaments.  
                     Any suggestions or ideas please feel free to post it on our group page. Your feedback is important as it's your society!
                     </p>

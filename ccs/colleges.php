@@ -1,10 +1,8 @@
 <?php
-    ob_start();
-    session_start();
-    
-    include 'dbconnect.php';
+	ob_start();
+	session_start();
+	require_once 'dbconnect.php';
 ?>
-
 
 
 <!DOCTYPE html>

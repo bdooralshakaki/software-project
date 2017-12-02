@@ -51,16 +51,6 @@
 		    $error = true;
 		    $emailError = 'The email you have entered is invalid, please try again.';
 		}
-		else if(!preg_match('/^x[\d]{8}@student\.dcu\.ie$/', $email)){ // forcing exact x(8 numbers)@student.dcu.ie on the user/student
-		    // Return Error - Invalid Email
-		    $error = true;
-		    $emailError = 'The email you have entered is invalid, please try again.';
-		}
-		else if(!preg_match('/^x[\d]{8}@student\.ucd\.ie$/', $email)){ // forcing exact x(8 numbers)@student.ucd.ie on the user/student
-		    // Return Error - Invalid Email
-		    $error = true;
-		    $emailError = 'The email you have entered is invalid, please try again.';
-		}
 		else {
 			// check email exist or not
 			$query = "SELECT userEmail FROM users WHERE userEmail='$email'";
@@ -109,7 +99,7 @@
 		// if there's no error, continue to signup
 		if( !$error ) {
 			
-			$query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
+			$query = "INSERT INTO users(userName,userEmail,userPass,userLevel) VALUES('$name','$email','$password' , 0)";
 			$res = mysql_query($query);
 				
 			if ($res) {
@@ -136,8 +126,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
 <title>Registration</title>
-<link rel="stylesheet" href="css/register/Registerbootstrap.css" type="text/css"  />
-<link rel="stylesheet" href="css/register/Registerposition.css" type="text/css" />
+<link rel="stylesheet" href="css/registerbootstrap.css" type="text/css"  />
+<link rel="stylesheet" href="css/registerposition.css" type="text/css" />
+<link href="css/agency.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -149,7 +140,7 @@
     	<div class="col-md-12">
         
         	<div class="form-group">
-            	<br /><br /><h2 class="">Sign Up to College C&S</h2>
+            	<br /><br /><h2 class="">Register to College C&S</h2>
             </div>
         
         	<div class="form-group">
@@ -197,7 +188,7 @@
             <div class="form-group">
             	<div class="input-group">
 	                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-	            	<input type="password" name="pass" class="form-control" placeholder="Chouse Your Password." maxlength="15" />
+	            	<input type="password" name="pass" class="form-control" placeholder="Enter Your Password." maxlength="15" />
 	            </div>
                 <span class="text-danger"><?php echo $passError; ?></span>
             </div>
@@ -205,7 +196,7 @@
             <div class="form-group">
             	<div class="input-group">
 	                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-	            	<input type="password" name="pass2" class="form-control" placeholder="Confirm your password." maxlength="15" />
+	            	<input type="password" name="pass2" class="form-control" placeholder="Confirm Your Password." maxlength="15" />
 	            </div>
                 <span class="text-danger"><?php echo $pass2Error; ?></span>
             </div>
