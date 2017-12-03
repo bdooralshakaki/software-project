@@ -29,11 +29,16 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    
 
 
   </head>
 
  <body id="page-top">
+  
+  <div ="container">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -82,21 +87,23 @@
         </br>
         <div class="row text-center">
           <div class="col-md-4">
-             <img class="img-responsive" src="img/nci.jpg" alt="NCI" width="160" height="100">
+             <img class="img-responsive" src="img/nci.jpg" alt="NCI" width="260" height="150">
              <div class="text-center">
-                    <a class="info" href="nci.php">NCI</a>
+               </br>
+                <big><a class="info" href="nci.php">NCI</a></big>
                 </div>
-            <p class="text-muted">Welcome to National College of Ireland</p>
+                </br>
+            <p class="text-muted">Welcome to National College of Ireland, More information about the clubs and societie, Click on the Link</p>
           </div>
           
           <div class="col-md-4">
-             <img class="img-responsive" src="img/dit.png" alt="DIT" width="160" height="100">
+             <img class="img-responsive" src="img/dit.png" alt="DIT" width="260" height="150">
             <h4 class="service-heading">DIT</h4>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
           </div>
           
           <div class="col-md-4">
-             <img class="img-responsive" src="img/dcu.jpg" alt="DCU" width="160" height="100">
+             <img class="img-responsive" src="img/dcu.jpg" alt="DCU" width="260" height="150">
             <h4 class="service-heading" >DCU</h4>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
           </div>
@@ -104,7 +111,7 @@
       </div>
     </section>
     
-    
+    </div>
     
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

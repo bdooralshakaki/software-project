@@ -28,11 +28,14 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 
   </head>
 
  <body id="page-top">
+   
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -68,10 +71,10 @@
       </div>
     </nav>
   
-    <div class="container">
     
+    <div class="container">
        <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
+    <section id="portfolio">
       <div class="container">
         <div class="row">
           <a href="page.php" class="btn btn-info" role="button"> Create a page</a>
@@ -131,7 +134,7 @@
         </div>
       </div>
     </section>
-    </div>
+  </div>
     
     <!-- Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">

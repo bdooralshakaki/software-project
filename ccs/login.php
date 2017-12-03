@@ -58,15 +58,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0"> 
 <title>Login</title>
-<link rel="stylesheet" href="css/loginbootstrap.css" type="text/css"  />
-<link rel="stylesheet" href="css/loginposition.css" type="text/css" />
+
+ <!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="css/loginbootstrap.css" type="text/css"  /> -->
+<!-- <link rel="stylesheet" href="css/loginposition.css" type="text/css" /> -->
 <link href="css/agency.min.css" rel="stylesheet">
+<link href="css/agency.css" rel="stylesheet">
+<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
 </head>
-<body>
 
 <div class="container">
+  <body id="page-top">
 
-	<div id="login-form">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">College C&S</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="colleges.php">Colleges</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    			          <span class="glyphicon glyphicon-user"></span> <?php echo $userRow['userName']; ?><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></li>
+              </ul>
+            </li>
+        
+          </ul>
+        </div>
+      </div>
+    </nav>
+	</br>
+	</br>
+   	<div id="login-form">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
     
     	<div class="col-md-12">
@@ -128,8 +172,13 @@
    
     </form>
     </div>	
-
 </div>
+   
+
+
+
+
+
 
 </body>
 </html>
