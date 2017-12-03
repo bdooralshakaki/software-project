@@ -44,7 +44,6 @@
 		       $_SESSION['userId']    = $row['userId'];
 		       $_SESSION['userEmail']  = $row['userEmail'];
 		       $_SESSION['userName']  = $row['userName'];
-		       $_SESSION['userLevel'] = $row['userLevel'];
     
      
     		}

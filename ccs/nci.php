@@ -37,7 +37,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">College C&S</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.php">College C&S</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -48,14 +48,9 @@
               <a class="nav-link js-scroll-trigger" href="colleges.php">Colleges</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">clubs and socs</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
@@ -73,17 +68,20 @@
       </div>
     </nav>
   
-
+    <div class="container">
+    
        <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
       <div class="container">
         <div class="row">
+          <a href="page.php" class="btn btn-info" role="button"> Create a page</a>
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">NCI clubs and societies</h2>
-            
+          <h2 class="section-heading text-uppercase">NCI clubs and societies</h2>
+           
           </div>
         </div>
         </br>
+        
         <div class="row">
           <div class="col-md-4 col-sm-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
@@ -133,7 +131,7 @@
         </div>
       </div>
     </section>
-    
+    </div>
     
     <!-- Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
