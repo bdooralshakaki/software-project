@@ -3,44 +3,13 @@
     session_start();
     
     include 'dbconnect.php';
-    if($_SESSION['signed_in'] == false){
-        
-    }else {
-    	if($_SERVER['REQUEST_METHOD'] != 'POST')
-	{
-		//the form hasn't been posted yet, display it
-		echo '<div id="login-form">
-    		        <form method="post" action="">
-    		        	<div class="col-md-12">
-    		        		<div class="form-group">
-    		        			<label for="CSName"><h5>Club/soc name</h5></label>
-    	                    	<input type="text" class="form-control" name="CSName" id="PageName" placeholder="eg Chess "/><br />
-    	                    </div>
-    	                    
-    	    			    <div class="form-group">
-    		        			<label for="CSDescription"><h5>Description</h5></label>
-    	                    	<input type="text" class="form-control" name="CSDescription" id="PageDescription" placeholder="This is the chess club"/><br />
-    	                    </div>
-    	                    
-    	                     <div class="form-group">
-    		        			<label for="CollegeName"><h5>College</h5></label>
-    	                    	<input type="text" class="form-control" name="CollegeName" id="PageColleg" placeholder="NCI, Dit .."/><br />
-    	                    </div>
-    	                    
-    	                    <div class="form-group">
-    	    			        <input type="submit" class="btn btn-block btn-primary" value="submit"/>
-        			        </div>
-        			    </div>
-    		        </form>
-            </div>';
-	}
-	
-	else {
+    
+    
 	    //the form has been posted, so save it
 		$sql = "INSERT INTO Page(PageName, PageDescription, PageCollege)
-		   VALUES('" . mysql_real_escape_string($_POST['PageName']) . "',
-		            '" . mysql_real_escape_string($_POST['PageDescription']) . "',
-				 '" . mysql_real_escape_string($_POST['PageCollege']) . "')";
+		   VALUES('" . mysql_real_escape_string($_POST['CSName']) . "',
+		            '" . mysql_real_escape_string($_POST['CSDescription']) . "',
+				        '" . mysql_real_escape_string($_POST['CollegeName']) . "')"; 
 		$result = mysql_query($sql);
 		if(!$result)
 		{
@@ -51,8 +20,8 @@
 		{
 			echo '<p class="success">New Page succesfully added.</p>';
 		}
-	}
-}
+	
+
 
 ?>
 
@@ -127,7 +96,7 @@
 </br>
 </br>
 
-  <div class="container">
+ <div class="container">
       <h2> Create a page </h2>
       </br>
 		        <div id="login-form">
@@ -135,17 +104,17 @@
     		        	<div class="col-md-12">
     		        		<div class="form-group">
     		        			<label for="CSName"><h5>Club/soc name</h5></label>
-    	                    	<input type="text" class="form-control" name="CSName" id="clubsandsocName" placeholder="eg Chess "/><br />
+    	                    	<input type="text" class="form-control" name="CSName" id="PageName" placeholder="eg Chess "/><br />
     	                    </div>
     	                    
     	    			    <div class="form-group">
     		        			<label for="CSDescription"><h5>Description</h5></label>
-    	                    	<input type="text" class="form-control" name="CSDescription" id="ClubsandDescription" placeholder="This is the chess club"/><br />
+    	                    	<input type="text" class="form-control" name="CSDescription" id="PageDescription" placeholder="This is the chess club"/><br />
     	                    </div>
     	                    
     	                     <div class="form-group">
     		        			<label for="CollegeName"><h5>College</h5></label>
-    	                    	<input type="text" class="form-control" name="CollegeName" id="CollegeName" placeholder="NCI, Dit .."/><br />
+    	                    	<input type="text" class="form-control" name="CollegeName" id="PageCollege" placeholder="NCI, Dit .."/><br />
     	                    </div>
     	                    
     	                    <div class="form-group">
@@ -153,8 +122,8 @@
         			        </div>
         			    </div>
     		        </form>
-            </div>
-    </div>
+            </div> 
+    </div> 
    
     
 
