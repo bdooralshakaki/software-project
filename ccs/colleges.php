@@ -50,16 +50,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="colleges.php">Colleges</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="about.php">About</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="contact.php">Contact</a>
             </li>
             
             <li class="dropdown">

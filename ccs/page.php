@@ -4,14 +4,15 @@
     
     include 'dbconnect.php';
     
-    
-	    //the form has been posted, so save it
+if ( isset($_POST['submit']) ) {	    //the form has been posted, so save it
 		$sql = "INSERT INTO Page(PageName, PageDescription, PageCollege)
 		   VALUES('" . mysql_real_escape_string($_POST['CSName']) . "',
 		            '" . mysql_real_escape_string($_POST['CSDescription']) . "',
 				        '" . mysql_real_escape_string($_POST['CollegeName']) . "')"; 
 		$result = mysql_query($sql);
-		if(!$result)
+      
+    
+		/*if(!$result)
 		{
 			//something went wrong, display the error
 			echo 'Error' . mysql_error();
@@ -19,10 +20,14 @@
 		else
 		{
 			echo '<p class="success">New Page succesfully added.</p>';
-		}
-	
-
-
+		}*/
+		 if ($result == true) {
+    $errTyp = "success";
+    $errMSG = "New page succesfully added";
+   } else {
+    $errTyp = "danger";
+    $errMSG = "Something went wrong, try again later..."; 
+   } }
 ?>
 
 
@@ -67,16 +72,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="colleges.php">Colleges</a>
             </li>
            
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="about.php">About</a>
             </li>
           
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="contact.php">Contact</a>
             </li>
             
             <li class="dropdown">
@@ -99,6 +107,20 @@
  <div class="container">
       <h2> Create a page </h2>
       </br>
+      
+       <?php
+                if ( isset($errMSG) ) {
+    
+               ?>
+          <div class="form-group">
+             <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>">
+    <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                </div>
+             </div>
+               <?php
+   }
+   ?>
+             
 		        <div id="login-form">
     		        <form method="post" action="">
     		        	<div class="col-md-12">
@@ -118,7 +140,7 @@
     	                    </div>
     	                    
     	                    <div class="form-group">
-    	    			        <input type="submit" class="btn btn-block btn-primary" value="submit"/>
+    	    			        <input type="submit" name="submit" class="btn btn-block btn-primary" value="submit"/>
         			        </div>
         			    </div>
     		        </form>
